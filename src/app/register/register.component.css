@@ -1,0 +1,44 @@
+ button{
+    position: relative;
+    left: 140px;
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    /* border: 1px solid gray; */
+    /* width: 510px;
+    height: 600px; */
+    width: 510px;
+    flex-grow: 1;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 1px rgb(180, 199, 199);
+}
+h1{
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+small{
+    color: red;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset #ff0000c4
+}
+
+select.ng-invalid.ng-touched{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset #ff0000c4;
+    /* box-shadow: 0 0 13px inset rgb(149, 240, 149); */
+}
+.success{
+    border-color: green;
+}

@@ -1,0 +1,95 @@
+<main>
+    <div class="container">
+        <h1>Register</h1> <hr> <br>
+<form class="form" [formGroup]="shubham">
+            <div class="row">
+                <div class="col-md-6">
+                         <div class="form-group">
+                        <label for="fname" class="form-label">First Name</label>
+                        <input type="text" formControlName="fname" name="fname" class="form-control">
+                        <small id="el" *ngIf="!shubham.get('fname')?.valid && shubham.get('fname')?.touched">* Enter
+                            First Name</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Gender</label>
+
+                        <select name="gender" formControlName="gender" class="form-select" id="">
+                            <option selected>Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="stateId" class="form-label">State</label>
+                        <select name="stateId" formControlName="stateId" class="form-select"
+                            (change)="getCityList($any($event.target).value)">
+                            <!-- <option selected>Select</option> -->
+                            <option *ngFor="let s of stateName|keyvalue" [value]="s.key">{{s.value}}</option>
+                        </select>
+                        <small *ngIf="!shubham.get('stateId')?.valid && shubham.get('stateId')?.touched">* Select
+                            State</small>
+
+                    </div>
+                    <div class="form-group" appearance="fill">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" name="dob" formControlName="dob" class="form-control">
+                        <small *ngIf="!shubham.get('dob')?.valid && shubham.get('dob')?.touched">* Enter DOB</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="mob" class="form-label">Mobile Number</label>
+                        <input type="number" name="phno" formControlName="phno" class="form-control">
+                        <small *ngIf="!shubham.get('phno')?.valid && shubham.get('phno')?.touched">* Enter Mob
+                            Number</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lname" class="form-label">Last Name</label>
+                        <input type="text" name="lname" formControlName="lname" class="form-control">
+                        <small *ngIf="!shubham.get('lname')?.valid && shubham.get('lname')?.touched">* Enter Last
+                            Name</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="countryId" class="form-label">Country</label>
+                        <!-- <input type="text" id="countryInput" (click)="getCountryList()"class="form-control"  list="countryList"> -->
+                        <select name="countryId" formControlName="countryId" class="form-select"
+                            (change)="getStatesList($any($event.target).value)">
+                            <!-- <option value="" selected>select</option> -->
+                            <option *ngFor="let s of body|keyvalue" [value]="s.key">{{s.value}} </option>
+                        </select>
+                        <small *ngIf="!shubham.get('countryId')?.valid && shubham.get('countryId')?.touched">* Select
+                            Country</small>
+
+
+                    </div>
+                    <div class="form-group">
+                        <label for="cityId" class="form-label">City</label>
+                        <select name="cityId" formControlName="cityId" class="form-select">
+                            <option selected>Select</option>
+                            <option *ngFor="let s of cityName|keyvalue" [value]="s.key">{{s.value}} </option>
+                        </select>
+                        <small *ngIf="!shubham.get('cityId')?.valid && shubham.get('cityId')?.touched">* Select
+                            City</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" id="mail" class="form-label">E-Mail</label>
+                        <input type="email" [ngStyle]="{borderColor:bordercolor,color:textcolor}"
+                            (blur)="emailCheck($any($event.target).value)" name="email" formControlName="email"
+                            class="form-control" email>
+                        <small *ngIf="!shubham.get('email')?.valid && shubham.get('email')?.touched">* Enter Valid
+                            E-Mail</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button mat-raised-button color="primary" type="submit" class="m-2"
+                        (click)="register()">Register</button>
+                    <!-- [routerLink]="['/UnlockAcc']" -->
+                    <button mat-raised-button color="warn" type="" class="m-2">Reset</button>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</main>

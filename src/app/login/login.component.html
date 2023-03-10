@@ -1,0 +1,36 @@
+<main>
+<div class="container">
+    <header>
+        <h1>WelCome</h1><hr>
+    </header>
+    <section>
+        <form [formGroup]="login">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email" class="form-label">E-Mail</label>
+                    <input type="text" name="email" formControlName="email" [ngStyle]="{borderColor:bcolor,boxShadow:scolor}" class="form-control">
+                    <span *ngIf="!login.get('email')?.valid && login.get('email')?.touched" >* Please Enter Valid E-Mail</span>
+                
+
+                
+                    </div>
+                    <div class="form-group">
+                        <label for="pass" class="form-label">Password</label>
+                    <input type="password" name="pwd" [ngStyle]="{borderColor:bcolor,boxShadow:scolor}" formControlName="pwd" class="form-control">
+                    <span *ngIf="!login.get('pwd')?.valid && login.get('pwd')?.touched" >* Please Enter Password</span>
+                    </div>
+                    <div class="form-group">
+                        <button (click)="post()" mat-raised-button >Log In</button>
+                        <!-- class="btn btn-info m-2" -->
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <footer>
+        <a [routerLink]="['/ForgetPassword']">Forget Password..?</a>
+        <a [routerLink]="['/Register']">New User..?</a>
+    </footer>
+</div>
+</main>

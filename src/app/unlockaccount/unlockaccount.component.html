@@ -1,0 +1,43 @@
+
+<main>
+<div class="container">
+    <header>
+        <h1>Unlock Account</h1>
+        <hr>
+    </header>
+    <section>
+            <form [formGroup]="unlockAcc">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-Mail</label>
+                            <input type="email" name="email" formControlName="email" class="form-control">
+                            <span *ngIf="!unlockAcc.get('email')?.valid && unlockAcc.get('email')?.touched" >* Please Enter Valid E-Mail</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="newpassword" class="form-label">New Password</label>
+                            <input type="password" name="newPwd" formControlName="newPwd" class="form-control">
+                            <span *ngIf="!unlockAcc.get('newPwd')?.valid && unlockAcc.get('newPwd')?.touched" >* Enter New Password</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="temppass" class="form-label">Temporary Password</label>
+                            <input type="password" name="tempPwd" formControlName="tempPwd" [ngStyle]="{borderColor:bcolor,boxShadow:scolor}" class="form-control">
+                            <span *ngIf="!unlockAcc.get('tempPwd')?.valid && unlockAcc.get('tempPwd')?.touched" >* Enter Temporary Password</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmpass" class="form-label">Confirm Password</label>
+                            <input type="password" name="confirmPwd" formControlName="confirmPwd" class="form-control">
+                            <span *ngIf="!unlockAcc.get('confirmPwd')?.valid && unlockAcc.get('confirmPwd')?.touched" >* Mandatory Field</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <button (click)="unlock()"  mat-raised-button color="primary" >Unlock</button>
+                    <!-- class="btn btn-info" -->
+                </div>
+                </div>
+            </form>
+    </section>
+</div>
+</main>
