@@ -46,3 +46,24 @@ main{
     display: flex;
     flex-direction: column;
 }
+
+
+@media all and (max-width:300px){
+    .container{
+        width: 90%;
+    }
+    button{
+        position: relative;
+        left: 90px;
+    }
+}
+
+@media all and (max-width:350px){
+    .container{
+        width: 90%;
+    }
+    button{
+        position: relative;
+        left: 90px;
+    }
+}
