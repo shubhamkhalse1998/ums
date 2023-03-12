@@ -12,8 +12,13 @@ div{
     justify-content: space-evenly;
     
 }
+
+
 header{
     flex-grow: 2;
+}
+.navbar-toggler-icon{
+    color: black;
 }
 .h1{
     margin-left: 100px;
