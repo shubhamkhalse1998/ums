@@ -66,9 +66,11 @@ select.ng-invalid.ng-touched{
         width: 90%;
         
     }
-    button{
-        position: relative;
-        left: 13px;
+    .btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: -70px;
     }
 }
 
@@ -76,6 +78,9 @@ select.ng-invalid.ng-touched{
     button{
         position: relative;
         left: 40px;
+    }
+    .btn{
+        margin-left: -80px;
     }
 }
 
@@ -88,9 +93,8 @@ select.ng-invalid.ng-touched{
         width: 90%;
         
     }
-    button{
-        position: relative;
-        left: 90px;
+    .btn{
+        margin-left: -80px;
     }
 }
 
@@ -107,5 +111,8 @@ select.ng-invalid.ng-touched{
     button{
         position: relative;
         left: 90px;
+    }
+    .btn{
+        margin-left: -80px;
     }
 }

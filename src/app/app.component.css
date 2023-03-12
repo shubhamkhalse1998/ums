@@ -38,7 +38,7 @@ a{
     header{
         flex-grow: 1;
         width: 100%;
-        /* background-color: rgb(33, 33, 80); */
+    
     }
     div{
         flex-grow: 3;
@@ -69,7 +69,7 @@ a{
     header{
         flex-grow: 1;
         width: 100%;
-        /* background-color: rgb(33, 33, 80); */
+    
     }
     div{
         flex-grow: 3;
@@ -98,7 +98,7 @@ a{
     header{
         flex-grow: 1;
         width: 100%;
-        /* background-color: rgb(33, 33, 80); */
+        
     }
     div{
         flex-grow: 3;
@@ -128,7 +128,7 @@ a{
     header{
         flex-grow: 1;
         width: 100%;
-        /* background-color: rgb(33, 33, 80); */
+    
     }
     div{
         flex-grow: 3;
@@ -157,7 +157,7 @@ a{
     header{
         flex-grow: 1;
         width: 100%;
-        /* background-color: rgb(33, 33, 80); */
+    
     }
     div{
         flex-grow: 3;
@@ -182,3 +182,10 @@ a{
         font-size: 17px;
     }
 }
+/* 
+@media all and (max-width:300px){
+    .navbar-toggler{
+        position: relative;
+        left: 80px;
+    } */
+/* } */

@@ -1,5 +1,5 @@
 
-<main>
+<!-- <main>
 
 <header>
     <h1 class="h1">UMS</h1>
@@ -12,7 +12,35 @@
     <a [routerLink]="'Login'">Login</a>
     <a [routerLink]="'Logout'">Logout</a>
 </div>
-</main>
+</main> -->
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">UMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" [routerLink]="['Home']" routerLink="home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="login" [routerLink]="['Login']" routerLinkActive="active-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['Register']" routerLink="register" >Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="unlock" [routerLink]="['Unlock']" routerLinkActive="active-link">unlock-account</a>
+          </li>
+<!--           
+          <li class="nav-item">
+            <a class="nav-link" routerLink="logout" routerLinkActive="active-link">Forgot-password</a>
+          </li> -->
 
+        </ul>
+      </div>
+    </div>
+  </nav>
 <router-outlet></router-outlet>
