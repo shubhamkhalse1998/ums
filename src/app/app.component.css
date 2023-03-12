@@ -12,7 +12,11 @@ div{
     justify-content: space-evenly;
     
 }
-
+.collapse navbar-collapse{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
 
 header{
     flex-grow: 2;
